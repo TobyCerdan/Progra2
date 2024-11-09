@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reserva de Tutores - Paso 2</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <div class="nav-banner">
+        <a href="index.html">
+            <img src="vertexlogo.png" alt="Logo VERTEX" class="logo">
+        </a>
+        <nav>
+            <a href="index.html#about-us">Sobre Nosotros</a>
+            <a href="index.html#benefits">Beneficios</a>
+            <a href="tutor-network.html">Tutor Network</a>
+            <a href="booking.html">Booking</a>
+            <a href="find.html">Buscar Tutores</a>
+            <a href="mis-reservas.html">Mis Reservas</a>
+            <a href="index.html#contact">Contacto</a>
+        </nav>
+    </div>
+
+    <div class="main-content">
+        <nav>
+        <h1>Reserva de Tutores</h1>
+        
+
+        
+        <form id="reservationForm" class="booking-form">
+            <h2>Detalles de la Reserva</h2>
+            <div class="form-group">
+                <label for="daySelect">Día</label>
+                <select id="daySelect" required>
+                    <option value="" disabled selected>Elige un día</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="hourSelect">Horario</label>
+                <select id="hourSelect" required>
+                    <option value="" disabled selected>Elige un horario</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="subjectSelect">Materia</label>
+                <select id="subjectSelect" required>
+                    <option value="" disabled selected>Elige una materia</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="programSelect">Programa</label>
+                <select id="programSelect" required>
+                    <option value="" disabled selected>Elige un programa</option>
+                </select>
+            </div>
+
+            <h3 id="subtotalDisplay">Subtotal: $0</h3>
+
+            <button type="submit" class="booking-button">Confirmar Reserva</button>
+        </form>
+
+        <script src="booking2.js"></script>
+        </nav>
+    </div>
+
+</body>
+</html>

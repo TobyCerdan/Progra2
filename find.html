@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Buscar Tutor - VERTEX</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="encontrar.js" defer></script>
+</head>
+<body>
+
+    <div class="nav-banner">
+        <a href="index.html">
+            <img src="vertexlogo.png" alt="Logo VERTEX" class="logo">
+        </a>
+        <nav>
+            <a href="index.html#about-us">Sobre Nosotros</a>
+            <a href="index.html#benefits">Beneficios</a>
+            <a href="tutor-network.html">Tutor Network</a>
+            <a href="booking.html">Booking</a>
+            <a href="find.html">Buscar Tutores</a>
+            <a href="mis-reservas.html">Mis Reservas</a>
+            <a href="index.html#contact">Contacto</a>
+        </nav>
+    </div>
+
+    <div class="main-content">
+        <h1>Buscar Tutor</h1>
+        
+        <form id="tutor-form" class="booking-form">
+            <div class="form-group">
+                <label for="day">Día</label>
+                <select id="day">
+                    <option value="lunes">Lunes</option>
+                    <option value="martes">Martes</option>
+                    <option value="miercoles">Miércoles</option>
+                    <option value="jueves">Jueves</option>
+                    <option value="viernes">Viernes</option>
+                    <option value="sabado">Sábado</option>
+                    <option value="domingo">Domingo</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="time">Hora</label>
+                <select id="time">
+                    <option value="08:00">08:00</option>
+                    <option value="09:00">09:00</option>
+                    <option value="10:00">10:00</option>
+                    <option value="11:00">11:00</option>
+                    <option value="12:00">12:00</option>
+                    <option value="13:00">13:00</option>
+                    <option value="14:00">14:00</option>
+                    <option value="15:00">15:00</option>
+                    <option value="16:00">16:00</option>
+                    <option value="17:00">17:00</option>
+                    <option value="18:00">18:00</option>
+                    <option value="19:00">19:00</option>
+                    <option value="20:00">20:00</option>
+                    <option value="21:00">21:00</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="program">Programa</label>
+                <select id="program">
+                    <option value="IB">IB</option>
+                    <option value="IGCSE">IGCSE</option>
+                    <option value="TOFEL">TOFEL</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="subject">Materia</label>
+                <select id="subject">
+                    <option value="Mathematics">Matemáticas</option>
+                    <option value="Physics">Física</option>
+                    <option value="Chemistry">Química</option>
+                    <option value="English Language">Inglés</option>
+                    <option value="History">Historia</option>
+                    <option value="Biology">Biología</option>
+                    <option value="Environmental Systems and Societies">Sistemas Ambientales y Sociedades</option>
+                    <option value="Spanish">Español</option>
+                    <option value="Economics">Economía</option>
+                    <option value="Business Management">Administración de Empresas</option>
+                    <option value="Global Politics">Política Global</option>
+                    <option value="Literature">Literatura</option>
+                    <option value="Writing Skills">Habilidades de Escritura</option>
+                </select>
+            </div>
+
+            <button type="button" class="booking-button" onclick="findTutors()">Buscar Tutores</button>
+        </form>
+
+        <div class="result" id="result"></div>
+        <div class="find-tutor-button-container">
+            <a href="booking.html" class="find-tutor-button">¡QUIERO RESERVAR MI CLASE!</a>
+        </div>
+    </div>
+
+</body>
+</html>

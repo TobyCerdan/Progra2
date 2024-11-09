@@ -1,0 +1,556 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #f3f4f6;
+    color: #333;
+    line-height: 1.6;
+}
+.welcome-banner {
+    position: relative;
+    width: 100%;
+    height: 100vh;  /* Ocupa toda la altura de la ventana */
+    overflow: hidden;  /* Para asegurar que el video no se desborde */
+}
+
+#welcome-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;  /* Asegura que el video cubra todo el espacio */
+    z-index: -1;  /* Asegura que el contenido se superponga al video */
+}
+
+/* Banner de navegación */
+.nav-banner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #0066cc;
+    padding: 15px 0;
+    width: 100%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    flex-wrap: wrap;
+}
+
+/* Logo */
+.nav-banner .logo {
+    height: 60px; 
+    margin-right: 5px; 
+    vertical-align: middle;
+}
+
+/* Animación para que el logo aparezca con suavidad */
+.logo {
+    opacity: 0;
+    transform: translateY(-20px);
+    animation: fadeInUp 1s forwards;
+    animation-delay: 0.5s;  /* Se retrasa la animación para que el logo no aparezca de inmediato */
+}
+
+/* Definir la animación de fadeInUp */
+@keyframes fadeInUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Estilos para los enlaces de navegación */
+.nav-banner a {
+    color: white;
+    background-color: #004080;
+    padding: 12px 25px;
+    text-decoration: none;
+    margin: 5px;
+    border-radius: 50px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+    white-space: nowrap; /* Evita que el texto se divida en varias líneas */
+}
+
+/* Hover en enlaces de navegación */
+.nav-banner a:hover {
+    background-color: #0059b3;
+}
+
+/* Nav Bar: Estilos para móviles */
+@media (max-width: 768px) {
+    /* Ocultar los enlaces de navegación */
+    .nav-banner nav {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        position: absolute;
+        top: 60px;
+        background-color: #0066cc;
+        left: 0;
+        padding: 20px 0;
+    }
+
+    /* Mostrar el menú de hamburguesa */
+    .nav-banner .hamburger {
+        display: block;
+        cursor: pointer;
+        z-index: 1100;
+    }
+
+    /* Cuando el menú hamburguesa es clickeado, muestra los enlaces */
+    .nav-banner.open nav {
+        display: flex;
+    }
+
+    /* Botones de navegación */
+    .nav-banner nav a {
+        color: white;
+        padding: 10px 20px;
+        text-align: center;
+        text-decoration: none;
+        display: block;
+    }
+
+    /* Cambiar el color de los botones al pasar el ratón */
+    .nav-banner nav a:hover {
+        background-color: #005bb5;
+    }
+}
+
+/* Estilos adicionales para el botón de hamburguesa */
+.hamburger {
+    display: none;
+    cursor: pointer;
+    font-size: 30px;
+    color: white;
+}
+
+/* Media Query para video en móvil */
+@media (max-width: 480px) {
+    .welcome-banner video {
+        object-fit: cover;
+        height: 100vh; /* Asegura que el video cubra toda la altura */
+        width: 100%;
+    }
+}
+.main-content {
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 20px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.05);
+}
+
+h1 {
+    font-size: 36px;
+    color: #004080;
+    margin-bottom: 20px;
+    text-align: center;
+}
+h1 {
+    opacity: 0;
+    transform: translateY(30px);
+    animation: fadeInDown 1s forwards;
+    animation-delay: 0.3s;  /* Para que no aparezca de inmediato */
+}
+
+@keyframes fadeInDown {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+h3{
+    font-size: 20px;
+    color: #004080;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+
+p {
+    font-size: 18px;
+    margin-bottom: 20px;
+    color: #555;
+}
+
+p2 {
+    font-size: 18px;
+    margin-bottom: 20px;
+    color: #ffffff;
+}
+
+
+#benefits {
+    background-color: #f9f9f9;
+    padding: 40px 20px;
+    margin-top: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.05);
+}
+
+#benefits h2 {
+    color: #004080;
+    text-align: center;
+    font-size: 32px;
+    margin-bottom: 30px;
+}
+
+
+
+#benefits ul {
+    list-style-type: none;
+    padding: 0;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+#benefits li {
+    font-size: 20px;
+    margin-bottom: 15px;
+    line-height: 1.8;
+    color: #333;
+    display: flex;
+    align-items: center;
+    background-color: white;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+#benefits li strong {
+    color: #0066cc;
+    margin-right: 10px;
+}
+
+
+.contact {
+    padding: 40px 20px;
+    background-color: #004080;
+    color: white;
+    text-align: center;
+    margin-top: 20px;
+
+}
+
+.contact h2 {
+    margin-bottom: 20px;
+    font-size: 28px;
+}
+
+.contact p {
+    font-size: 18px;
+}
+
+.tutor-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    padding: 20px;
+}
+
+
+.tutor-card {
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    max-width: 300px;
+    text-align: center;
+}
+
+.tutor-card h2 {
+    font-size: 24px;
+    color: #004080;
+    margin-bottom: 10px;
+}
+
+.tutor-photo {
+    width: 100%;
+    height: 150px;
+    background-color: #ddd;
+    border-radius: 8px;
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    color: #666;
+}
+
+.tutor-card p {
+    font-size: 18px;
+    margin: 10px 0;
+    color: #555;
+}
+
+.tutor-card ul {
+    list-style-type: disc;
+    padding-left: 20px;
+    text-align: left;
+}
+
+.tutor-card ul li {
+    font-size: 16px;
+    margin-bottom: 5px;
+    color: #333;
+}
+
+.tutor-photo {
+    width: 100%;
+    height: 150px;
+    overflow: hidden;
+    border-radius: 8px;
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.tutor-photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; 
+    border-radius: 8px;
+}
+
+.find-tutor-button-container {
+    text-align: center;
+    margin: 20px 0;
+}
+
+.find-tutor-button {
+    display: inline-block;
+    padding: 15px 30px;
+    font-size: 24px;
+    color: white;
+    background-color: #007bff; 
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background-color 0.3s;
+}
+
+.find-tutor-button:hover {
+    background-color: #0056b3; 
+}
+
+.booking-form {
+    margin: 30px auto;
+    padding: 30px;
+    background-color: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    font-family: 'Poppins', sans-serif;
+    font-size: 16px;
+    max-width: 500px;
+    width: 100%;
+    text-align: center; /* Esto asegura que todo dentro del formulario esté centrado */
+}
+
+.form-title {
+    font-size: 28px;
+    margin-bottom: 25px;
+    color: #004080;
+    text-align: center;
+    font-weight: 600;
+}
+
+.booking-form input[type="text"],
+.booking-form input[type="number"],
+.booking-form select {
+    width: 100%;
+    padding: 15px;
+    margin: 12px 0;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 16px;
+    color: #333;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+    background-color: #f9f9f9;
+}
+
+/* Animación para los inputs y select */
+.booking-form input[type="text"],
+.booking-form input[type="number"],
+.booking-form select {
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInUp 0.3s forwards;
+    animation-delay: 0.2s;  /* Retraso para que no aparezcan todos a la vez */
+}
+
+@keyframes fadeInUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.booking-form input[type="text"]:focus,
+.booking-form input[type="number"]:focus,
+.booking-form select:focus {
+    border-color: #0066cc;
+    box-shadow: 0 0 8px rgba(0, 102, 204, 0.4);
+    background-color: #ffffff;
+}
+
+.booking-form input[type="submit"] {
+    background-color: #0066cc;
+    color: white;
+    font-size: 18px;
+    padding: 15px 20px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    width: 100%;
+    margin-top: 20px;
+    transition: background-color 0.3s ease;
+}
+
+.booking-form input[type="submit"]:hover {
+    background-color: #005bb5;
+}
+
+.booking-form input[type="submit"]:active {
+    background-color: #004080;
+}
+
+.booking-form label {
+    font-size: 16px;
+    color: #333;
+    margin-bottom: 8px;
+    display: block;
+    font-weight: 500;
+}
+
+.booking-form .form-group {
+    margin-bottom: 20px;
+}
+
+.booking-form .form-group select,
+.booking-form .form-group input[type="text"],
+.booking-form .form-group input[type="number"] {
+    width: 100%;
+    padding: 15px;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+    background-color: #f9f9f9;
+    font-size: 16px;
+    color: #333;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.booking-form .form-group select:focus,
+.booking-form .form-group input[type="text"]:focus,
+.booking-form .form-group input[type="number"]:focus {
+    border-color: #0066cc;
+    box-shadow: 0 0 8px rgba(0, 102, 204, 0.4);
+    background-color: #ffffff;
+}
+
+
+        
+.booking-button {
+    background-color: #007BFF;    
+    color: white;               
+    padding: 10px 20px;    
+    border: none;           
+    border-radius: 4px;           
+    cursor: pointer;           
+    font-size: 16px;     
+    margin-top: 20px; /* Opcional, si quieres un poco de espacio encima del botón */
+    display: inline-block; /* Asegura que el botón no ocupe toda la línea */
+}
+
+.booking-button:hover {
+    background-color: #0056b3;     
+}
+
+/* Estilos para el banner de cada reserva */
+.reserva-banner {
+    background-color: #0066cc;
+    color: white;
+    padding: 10px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.reserva-banner h3 {
+    color: white;
+    margin: 0;
+}
+
+/* Estilos para el contenido desplegable de cada reserva */
+.reserva-detalles {
+    background-color: #e6f2ff;
+    padding: 15px;
+    display: none;
+    margin-bottom: 10px;
+    border-radius: 5px;
+}
+
+.botones {
+    display: flex;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.boton-modificar,
+.boton-eliminar {
+    padding: 8px 16px;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.boton-modificar {
+    background-color: #4CAF50;
+    color: white;
+}
+
+.boton-eliminar {
+    background-color: #f44336;
+    color: white;
+}
+
+/* Hover en botones */
+.boton-modificar:hover {
+    background-color: #388e3c;
+}
+
+.boton-eliminar:hover {
+    background-color: #d32f2f;
+}
+
+/* Estilos para el nuevo botón REALIZADA */
+.boton-realizada {
+    background-color: #28a745;  /* Color verde */
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-left: 10px; /* Separación con los otros botones */
+    transition: background-color 0.3s;
+}
+
+.boton-realizada:hover {
+    background-color: #218838; /* Color verde más oscuro al hacer hover */
+}
