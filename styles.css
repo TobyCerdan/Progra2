@@ -19,8 +19,12 @@ body {
 }
 
 #welcome-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
     width: 100%;  /* Ocupa todo el ancho de la pantalla */
-    height: 100%; /* Mantiene la proporción del video */
+    height: auto%; /* Mantiene la proporción del video */
     object-fit: cover; /* Hace que el video cubra el área, sin distorsionar */
     object-position: center center; /* Centra el video */
 }
