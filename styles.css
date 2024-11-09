@@ -20,7 +20,7 @@ body {
 
 #welcome-video {
     width: 100%;  /* Ocupa todo el ancho de la pantalla */
-    height: auto; /* Mantiene la proporción del video */
+    height: 100%; /* Mantiene la proporción del video */
     object-fit: cover; /* Hace que el video cubra el área, sin distorsionar */
     object-position: center center; /* Centra el video */
 }
