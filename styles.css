@@ -19,9 +19,6 @@ body {
 }
 
 #welcome-video {
-    position: absolute;
-    top: 0;
-    left: 0;
     height: 100%;
     width: 100%;  /* Ocupa todo el ancho de la pantalla */
     height: auto%; /* Mantiene la proporción del video */
