@@ -26,6 +26,29 @@ body {
     object-position: center center; /* Centra el video */
 }
 
+/* Elimina márgenes y bordes en el nav-banner */
+.nav-banner {
+    margin: 0;
+    padding: 0;
+    border: none;
+}
+
+/* Asegura que el video esté alineado sin márgenes */
+#welcome-video {
+    display: block;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    border: none;
+}
+
+/* Si hay un contenedor adicional para el video, aplica estos ajustes también */
+.welcome-banner {
+    margin: 0;
+    padding: 0;
+    border: none;
+}
+
 /* Opcional: Estilo para pantallas más grandes */
 @media (min-width: 1024px) {
     #welcome-video {
