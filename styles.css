@@ -477,6 +477,37 @@ p2 {
     background-color: #0056b3;     
 }
 
+@media (max-width: 768px) {
+    /* Asegura que el formulario esté visible */
+    #reservationForm {
+        display: block; /* En caso de que el formulario esté oculto por alguna razón */
+        padding: 20px;
+        margin: 20px auto; /* Centra el formulario */
+        width: 90%; /* Asegura que el formulario ocupe un buen porcentaje de la pantalla */
+        box-sizing: border-box; /* Asegura que los márgenes no afecten el tamaño */
+    }
+
+    /* Ajustar los botones y campos */
+    #reservationForm select, #reservationForm button {
+        width: 100%; /* Asegura que los select y el botón ocupen todo el ancho disponible */
+        padding: 10px;
+        font-size: 16px;
+        margin-bottom: 10px; /* Agrega algo de espacio entre los elementos */
+    }
+
+    /* Estilo del botón de reserva */
+    .booking-button {
+        background-color: #007BFF;
+        color: white;
+        padding: 12px;
+        border-radius: 5px;
+        font-size: 18px;
+        width: 100%; /* Ocupa todo el ancho */
+        cursor: pointer;
+    }
+}
+
+
 /* Estilos para el banner de cada reserva */
 .reserva-banner {
     background-color: #0066cc;
