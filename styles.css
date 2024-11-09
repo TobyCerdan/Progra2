@@ -117,6 +117,8 @@ nav a {
         right: 0;
         background-color: #0066cc;
         padding: 10px 0;
+        z-index: 1000; /* Asegura que el nav-banner esté por encima de otros elementos */
+
     }
 
     nav.open {
