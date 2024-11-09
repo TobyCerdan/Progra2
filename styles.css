@@ -37,6 +37,7 @@ body {
     width: 100%;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     flex-wrap: wrap;
+    position: relative;
 }
 
 /* Logo */
@@ -79,56 +80,55 @@ body {
 .nav-banner a:hover {
     background-color: #0059b3;
 }
-
-/* Nav Bar: Estilos para móviles */
-@media (max-width: 768px) {
-    /* Ocultar los enlaces de navegación */
-    .nav-banner nav {
-        display: none;
-        flex-direction: column;
-        width: 100%;
-        position: absolute;
-        top: 60px;
-        background-color: #0066cc;
-        left: 0;
-        padding: 20px 0;
-    }
-
-    /* Mostrar el menú de hamburguesa */
-    .nav-banner .hamburger {
-        display: block;
-        cursor: pointer;
-        z-index: 1100;
-    }
-
-    /* Cuando el menú hamburguesa es clickeado, muestra los enlaces */
-    .nav-banner.open nav {
-        display: flex;
-    }
-
-    /* Botones de navegación */
-    .nav-banner nav a {
-        color: white;
-        padding: 10px 20px;
-        text-align: center;
-        text-decoration: none;
-        display: block;
-    }
-
-    /* Cambiar el color de los botones al pasar el ratón */
-    .nav-banner nav a:hover {
-        background-color: #005bb5;
-    }
+/* Menú de navegación */
+nav {
+    display: flex;
+    gap: 20px;
 }
 
-/* Estilos adicionales para el botón de hamburguesa */
+/* Estilo para los enlaces del menú */
+nav a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+/* Estilo del botón de hamburguesa */
 .hamburger {
     display: none;
-    cursor: pointer;
     font-size: 30px;
     color: white;
+    cursor: pointer;
 }
 
+/* Mostrar el botón de hamburguesa en pantallas pequeñas */
+@media (max-width: 768px) {
+    .hamburger {
+        display: block;
+    }
+
+    /* Estilo del menú en versión móvil */
+    nav {
+        display: none; /* Ocultamos el menú por defecto en móvil */
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        right: 0;
+        background-color: #0066cc;
+        padding: 10px 0;
+    }
+
+    nav.open {
+        display: flex; /* Mostramos el menú cuando se active */
+    }
+
+    nav a {
+        padding: 10px;
+        text-align: center;
+        width: 100%;
+    }
+}
 /* Media Query para video en móvil */
 @media (max-width: 480px) {
     .welcome-banner video {
