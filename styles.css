@@ -14,7 +14,7 @@ body {
 .welcome-banner {
     position: relative;
     width: 100%;
-    overflow: hidden; /* Evita que el video se salga del contenedor */
+
 }
 
 #welcome-video {
