@@ -50,7 +50,7 @@ body {
 
 @media (min-width: 1024px) {
     #welcome-video {
-        max-height: 100vh; /* Para pantallas grandes, ocupando toda la altura */
+        max-height: 100vh; 
     }
 }
 
@@ -396,12 +396,6 @@ p2 {
     animation-delay: 0.2s;  
 }
 
-@keyframes fadeInUp {
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
 
 .booking-form input[type="text"]:focus,
 .booking-form input[type="number"]:focus,
