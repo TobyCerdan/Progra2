@@ -590,8 +590,8 @@ p2 {
 
 .cart-container {
     display: flex;
-    justify-content: center;  /* Centra el contenedor */
-    margin-top: 20px;         /* Espacio superior opcional */
+    justify-content: center;  
+    margin-top: 20px;         
 }
 
 .clear-cart-button {
