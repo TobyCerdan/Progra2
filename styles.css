@@ -587,3 +587,19 @@ p2 {
 .boton-realizada:hover {
     background-color: #218838; 
 }
+
+.clear-cart-button {
+    background-color: #e74c3c;  
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+.clear-cart-button:hover {
+    background-color: #c0392b;  
+}
+
