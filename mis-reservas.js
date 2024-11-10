@@ -63,6 +63,6 @@ function toggleDetalles(id) {
 
 
 function vaciarCarrito() {
-    localStorage.removeItem("reservas"); 
+    localStorage.clear(); 
     alert("¡Se realizaron los cambios exitosamente!");      
 }
