@@ -164,13 +164,20 @@ h1 {
     color: #004080;
     margin-bottom: 20px;
     text-align: center;
-    opacity: 0;                    /* Inicialmente invisible */
-    transition: opacity 2s ease-in-out;
+    opacity: 0;                  /* Empieza invisible */
+    animation: fadeIn 2s ease-in forwards;  /* Aplica animación */
 }
 
-h1.mostrar {
-    opacity: 1;                    /* Se hace visible */
+/* Definición de la animación fade-in */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
 }
+
 
 
 
