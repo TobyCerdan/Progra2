@@ -10,20 +10,18 @@ body {
     color: #333;
     line-height: 1.6;
 }
-/* Asegura que el video ocupe todo el ancho, pero se ajuste bien en dispositivos móviles */
 .welcome-banner {
     position: relative;
     width: 100%;
-    overflow: hidden; /* Evita que el video se salga del contenedor */
-
+    overflow: hidden; 
 }
 
 #welcome-video {
     height: 100%;
-    width: 100%;  /* Ocupa todo el ancho de la pantalla */
-    height: auto%; /* Mantiene la proporción del video */
-    object-fit: cover; /* Hace que el video cubra el área, sin distorsionar */
-    object-position: center center; /* Centra el video */
+    width: 100%; 
+    height: auto%; 
+    object-fit: cover;
+    object-position: center center; 
 }
 
 /* Elimina márgenes y bordes en el nav-banner */
@@ -42,22 +40,20 @@ body {
     border: none;
 }
 
-/* Si hay un contenedor adicional para el video, aplica estos ajustes también */
+
 .welcome-banner {
     margin: 0;
     padding: 0;
     border: none;
 }
 
-/* Opcional: Estilo para pantallas más grandes */
+
 @media (min-width: 1024px) {
     #welcome-video {
         max-height: 100vh; /* Para pantallas grandes, ocupando toda la altura */
     }
 }
 
-
-/* Banner de navegación */
 .nav-banner {
     display: flex;
     align-items: center;
@@ -70,30 +66,20 @@ body {
     position: relative;
 }
 
-/* Logo */
+
 .nav-banner .logo {
     height: 60px; 
     margin-right: 5px; 
     vertical-align: middle;
 }
 
-/* Animación para que el logo aparezca con suavidad */
 .logo {
     opacity: 0;
     transform: translateY(-20px);
     animation: fadeInUp 1s forwards;
-    animation-delay: 0.5s;  /* Se retrasa la animación para que el logo no aparezca de inmediato */
+    animation-delay: 0.5s; 
 }
 
-/* Definir la animación de fadeInUp */
-@keyframes fadeInUp {
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-/* Estilos para los enlaces de navegación */
 .nav-banner a {
     color: white;
     background-color: #004080;
@@ -103,27 +89,26 @@ body {
     border-radius: 50px;
     font-weight: bold;
     transition: background-color 0.3s ease;
-    white-space: nowrap; /* Evita que el texto se divida en varias líneas */
+    white-space: nowrap; 
 }
 
-/* Hover en enlaces de navegación */
 .nav-banner a:hover {
     background-color: #0059b3;
 }
-/* Menú de navegación */
+
 nav {
     display: flex;
     gap: 20px;
 }
 
-/* Estilo para los enlaces del menú */
+
 nav a {
     color: white;
     text-decoration: none;
     font-size: 16px;
 }
 
-/* Estilo del botón de hamburguesa */
+
 .hamburger {
     display: none;
     font-size: 30px;
@@ -131,15 +116,13 @@ nav a {
     cursor: pointer;
 }
 
-/* Mostrar el botón de hamburguesa en pantallas pequeñas */
 @media (max-width: 768px) {
     .hamburger {
         display: block;
     }
 
-    /* Estilo del menú en versión móvil */
     nav {
-        display: none; /* Ocultamos el menú por defecto en móvil */
+        display: none; 
         flex-direction: column;
         position: absolute;
         top: 60px;
@@ -147,12 +130,11 @@ nav a {
         right: 0;
         background-color: #0066cc;
         padding: 10px 0;
-        z-index: 1000; /* Asegura que el nav-banner esté por encima de otros elementos */
+        z-index: 1000; 
 
     }
-
     nav.open {
-        display: flex; /* Mostramos el menú cuando se active */
+        display: flex; 
     }
 
     nav a {
@@ -161,11 +143,10 @@ nav a {
         width: 100%;
     }
 }
-/* Media Query para video en móvil */
 @media (max-width: 480px) {
     .welcome-banner video {
         object-fit: cover;
-        height: 100vh; /* Asegura que el video cubra toda la altura */
+        height: 100vh; 
         width: 100%;
     }
 }
@@ -188,14 +169,7 @@ h1 {
     opacity: 0;
     transform: translateY(30px);
     animation: fadeInDown 1s forwards;
-    animation-delay: 0.3s;  /* Para que no aparezca de inmediato */
-}
-
-@keyframes fadeInDown {
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
+    animation-delay: 0.3s; 
 }
 
 
@@ -385,7 +359,7 @@ p2 {
     font-size: 16px;
     max-width: 500px;
     width: 100%;
-    text-align: center; /* Esto asegura que todo dentro del formulario esté centrado */
+    text-align: center; 
 }
 
 .form-title {
@@ -410,14 +384,13 @@ p2 {
     background-color: #f9f9f9;
 }
 
-/* Animación para los inputs y select */
 .booking-form input[type="text"],
 .booking-form input[type="number"],
 .booking-form select {
     opacity: 0;
     transform: translateY(20px);
     animation: fadeInUp 0.3s forwards;
-    animation-delay: 0.2s;  /* Retraso para que no aparezcan todos a la vez */
+    animation-delay: 0.2s;  
 }
 
 @keyframes fadeInUp {
@@ -488,8 +461,6 @@ p2 {
     box-shadow: 0 0 8px rgba(0, 102, 204, 0.4);
     background-color: #ffffff;
 }
-
-
         
 .booking-button {
     background-color: #007BFF;    
@@ -499,8 +470,8 @@ p2 {
     border-radius: 4px;           
     cursor: pointer;           
     font-size: 16px;     
-    margin-top: 20px; /* Opcional, si quieres un poco de espacio encima del botón */
-    display: inline-block; /* Asegura que el botón no ocupe toda la línea */
+    margin-top: 20px; 
+    display: inline-block; 
 }
 
 .booking-button:hover {
@@ -508,37 +479,32 @@ p2 {
 }
 
 @media (max-width: 768px) {
-    /* Asegura que el formulario esté visible */
     #reservationForm {
-        display: block; /* En caso de que el formulario esté oculto por alguna razón */
+        display: block; 
         padding: 20px;
-        margin: 20px auto; /* Centra el formulario */
-        width: 90%; /* Asegura que el formulario ocupe un buen porcentaje de la pantalla */
-        box-sizing: border-box; /* Asegura que los márgenes no afecten el tamaño */
+        margin: 20px auto; 
+        width: 90%; 
+        box-sizing: border-box; 
     }
 
-    /* Ajustar los botones y campos */
     #reservationForm select, #reservationForm button {
-        width: 100%; /* Asegura que los select y el botón ocupen todo el ancho disponible */
+        width: 100%; 
         padding: 10px;
         font-size: 16px;
-        margin-bottom: 10px; /* Agrega algo de espacio entre los elementos */
+        margin-bottom: 10px; 
     }
-
-    /* Estilo del botón de reserva */
+    
     .booking-button {
         background-color: #007BFF;
         color: white;
         padding: 12px;
         border-radius: 5px;
         font-size: 18px;
-        width: 100%; /* Ocupa todo el ancho */
+        width: 100%; 
         cursor: pointer;
     }
 }
 
-
-/* Estilos para el banner de cada reserva */
 .reserva-banner {
     background-color: #0066cc;
     color: white;
@@ -557,7 +523,6 @@ p2 {
     margin: 0;
 }
 
-/* Estilos para el contenido desplegable de cada reserva */
 .reserva-detalles {
     background-color: #e6f2ff;
     padding: 15px;
@@ -592,7 +557,6 @@ p2 {
     color: white;
 }
 
-/* Hover en botones */
 .boton-modificar:hover {
     background-color: #388e3c;
 }
@@ -601,16 +565,15 @@ p2 {
     background-color: #d32f2f;
 }
 
-/* Estilos para el nuevo botón REALIZADA */
 .boton-realizada {
-    background-color: #28a745;  /* Color verde */
+    background-color: #28a745; 
     color: white;
     padding: 10px 20px;
     border: none;
     border-radius: 5px;
     cursor: pointer;
     font-size: 16px;
-    margin-left: 10px; /* Separación con los otros botones */
+    margin-left: 10px; 
     transition: background-color 0.3s;
 }
 
