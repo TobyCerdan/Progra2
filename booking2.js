@@ -1,7 +1,6 @@
-// Array de tutores
-// Función para guardar una reserva en el localStorage
+
 function guardarReserva(tutor, programa, materia, dia, hora, horas) {
-    // Crear objeto de la reserva
+
     const reserva = {
         nombre: tutor.nombre,
         programa: programa,
@@ -11,10 +10,10 @@ function guardarReserva(tutor, programa, materia, dia, hora, horas) {
         cantidadHoras: horas
     };
 
-    // Obtener el array de reservas almacenado en el localStorage (o un array vacío si no existe)
+   
     let reservas = JSON.parse(localStorage.getItem("reservas")) || [];
-    reservas.push(reserva); // Añadir la nueva reserva
-    localStorage.setItem("reservas", JSON.stringify(reservas)); // Guardar el array actualizado en localStorage
+    reservas.push(reserva); 
+    localStorage.setItem("reservas", JSON.stringify(reservas)); 
 }
 var tutors = [
     {
@@ -136,17 +135,17 @@ function calculateSubtotal() {
 
 calculateSubtotal();
 
-// Modificar el evento de confirmación de reserva
+
 document.getElementById("reservationForm").onsubmit = function(event) {
     event.preventDefault(); 
     
-    // Obtener datos seleccionados por el usuario
+
     const programaSeleccionado = programSelect.value;
     const materiaSeleccionada = subjectSelect.value;
     const diaSeleccionado = daySelect.value;
     const horaSeleccionada = hourSelect.value;
 
-    // Llamar a la función para guardar la reserva
+
     guardarReserva(tutor, programaSeleccionado, materiaSeleccionada, diaSeleccionado, horaSeleccionada, hours);
 
     alert("Reserva confirmada para " + selectedTutor + " por " + hours + " horas.");
