@@ -24,14 +24,14 @@ body {
     object-position: center center; 
 }
 
-/* Elimina márgenes y bordes en el nav-banner */
+
 .nav-banner {
     margin: 0;
     padding: 0;
     border: none;
 }
 
-/* Asegura que el video esté alineado sin márgenes */
+
 #welcome-video {
     display: block;
     width: 100%;
@@ -164,11 +164,11 @@ h1 {
     color: #004080;
     margin-bottom: 20px;
     text-align: center;
-    opacity: 0;                  /* Empieza invisible */
-    animation: fadeIn 2s ease-in forwards;  /* Aplica animación */
+    opacity: 0;                  
+    animation: fadeIn 2s ease-in forwards;  
 }
 
-/* Definición de la animación fade-in */
+
 @keyframes fadeIn {
     from {
         opacity: 0;
@@ -177,9 +177,6 @@ h1 {
         opacity: 1;
     }
 }
-
-
-
 
 
 h3{
@@ -588,5 +585,5 @@ p2 {
 }
 
 .boton-realizada:hover {
-    background-color: #218838; /* Color verde más oscuro al hacer hover */
+    background-color: #218838; 
 }
