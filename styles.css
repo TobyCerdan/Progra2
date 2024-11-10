@@ -164,15 +164,14 @@ h1 {
     color: #004080;
     margin-bottom: 20px;
     text-align: center;
-    opacity: 0;          /* Inicialmente invisible */
-    transition: opacity 1.5s ease-in, transform 1.5s ease-in; /* Suaviza la opacidad y el desplazamiento */
-    transform: translateY(20px); /* Empieza con un pequeño desplazamiento */
+    opacity: 0;                    /* Inicialmente invisible */
+    transition: opacity 2s ease-in-out;
 }
 
-body:hover h1 {
-    opacity: 1;          /* Hace que el texto sea visible */
-    transform: translateY(0); /* Anima el desplazamiento */
+h1.mostrar {
+    opacity: 1;                    /* Se hace visible */
 }
+
 
 
 
