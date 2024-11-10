@@ -64,5 +64,6 @@ function toggleDetalles(id) {
 
 function vaciarCarrito() {
     localStorage.clear(); 
-    alert("¡Se realizaron los cambios exitosamente!");      
+    alert("¡Se realizaron los cambios exitosamente!");
+    location.reload();
 }
