@@ -588,8 +588,14 @@ p2 {
     background-color: #218838; 
 }
 
+.cart-container {
+    display: flex;
+    justify-content: center;  /* Centra el contenedor */
+    margin-top: 20px;         /* Espacio superior opcional */
+}
+
 .clear-cart-button {
-    background-color: #e74c3c;  
+    background-color: #e74c3c;
     color: white;
     padding: 10px 20px;
     border: none;
@@ -600,6 +606,5 @@ p2 {
 }
 
 .clear-cart-button:hover {
-    background-color: #c0392b;  
+    background-color: #c0392b;
 }
-
