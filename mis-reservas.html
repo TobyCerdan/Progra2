@@ -20,21 +20,21 @@
             <a href="mis-reservas.html">Mis Reservas</a>
             <a href="index.html#contact">Contacto</a>
         </nav>
-                <!-- Botón de hamburguesa -->
+
         <div class="hamburger" onclick="toggleMenu()">&#9776;</div>
     </div>
 
     <div class="main-content">
         <h1>Mis Reservas</h1>
-        <!-- El contenido de reservas se generará dinámicamente desde mis-reservas.js -->
+
     </div>
-    <!-- Enlace al script para cargar las reservas dinámicamente -->
+
     <script src="mis-reservas.js"></script>
 
     <script>
         function toggleMenu() {
             const nav = document.querySelector('nav');
-            console.log('¡El botón de hamburguesa ha sido clickeado!'); // Línea de prueba
+            console.log('¡El botón de hamburguesa ha sido clickeado!'); 
             nav.classList.toggle('open');
         }
 
