@@ -59,3 +59,9 @@ function toggleDetalles(id) {
     const detalles = document.getElementById(id);
     detalles.style.display = detalles.style.display === "none" ? "block" : "none";
 }
+
+
+function vaciarCarrito() {
+    localStorage.removeItem("carritoReservas"); 
+    alert("¡El carrito ha sido vaciado!");      
+}
