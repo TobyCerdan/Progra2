@@ -38,7 +38,8 @@ reservas.forEach((reserva, index) => {
 
 function eliminarReserva(index) {
     reservas.splice(index, 1); 
-    localStorage.setItem("reservas", JSON.stringify(reservas)); 
+    localStorage.setItem("reservas", JSON.stringify(reservas));
+    alert("¡Se realizaron los cambios exitosamente!");
     location.reload(); 
 }
 
@@ -63,5 +64,5 @@ function toggleDetalles(id) {
 
 function vaciarCarrito() {
     localStorage.removeItem("carritoReservas"); 
-    alert("¡El carrito ha sido vaciado!");      
+    alert("¡Se realizaron los cambios exitosamente!");      
 }
